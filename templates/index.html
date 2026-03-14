@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Főoldal{% endblock %}
+{% block content %}
+
+<div class="hero">
+    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1400&auto=format&fit=crop" alt="coding">
+    <div class="hero-text">
+        <h1>Flask + Docker</h1>
+        <p>Automatikus CI/CD pipeline-nal</p>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Üdvözlünk!</h2>
+    <p>Ez egy egyszerű Flask alkalmazás, amit Dockerrel futtatunk és GitHub Actions CI/CD pipeline-nal deployolunk.</p>
+
+    <div class="card-grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600&auto=format&fit=crop" alt="docker">
+            <div class="card-body">
+                <h3>🐳 Docker</h3>
+                <p>Az alkalmazás Docker konténerben fut, így bárhol ugyanúgy működik.</p>
+                <a href="/about" class="btn">Tudj meg többet</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&auto=format&fit=crop" alt="github">
+            <div class="card-body">
+                <h3>⚙️ CI/CD Pipeline</h3>
+                <p>GitHub Actions automatikusan teszteli, buildeli és deployolja az appot.</p>
+                <a href="/api/data" class="btn">API endpoint</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop" alt="cloud">
+            <div class="card-body">
+                <h3>☁️ AWS EC2</h3>
+                <p>Az alkalmazás AWS EC2 szerveren fut, Nginx reverse proxy mögött.</p>
+                <a href="/about" class="btn">Részletek</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="api-box">
+        <p>🔗 API endpoint: <strong>GET /api/data</strong></p>
+        <p>Próbáld ki: <a href="/api/data" style="color:#00ff88">/api/data</a></p>
+    </div>
+</div>
+
+{% endblock %}
